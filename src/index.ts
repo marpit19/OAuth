@@ -22,7 +22,7 @@ mongoose.connect(uri, {
 
 // Middleware
 app.use(express.json());
-app.use(cors({ origin: "http://localhost:3000", credentials: true }))
+app.use(cors({ origin: "https://loving-beaver-25d3b8.netlify.app", credentials: true }))
 
 app.set("trust proxy",1);
 
@@ -87,7 +87,7 @@ app.get('/auth/google/callback',
   passport.authenticate('google', { failureRedirect: '/login' }),
   function(req, res) {
     // Successful authentication, redirect home.
-    res.redirect('http://localhost:3000');
+    res.redirect('https://loving-beaver-25d3b8.netlify.app');
   });
 
 app.get("/", (req, res) => {
